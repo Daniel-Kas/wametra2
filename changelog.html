@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pełna historia zmian i aktualizacji aplikacji Wametra 2 — zobacz, jak rozwija się nasze narzędzie do inwentaryzacji wodomierzy i urządzeń pomiarowych.">
+    <title>Historia zmian | Wametra 2</title>
+    <link rel="canonical" href="https://daniel-kas.github.io/wametra2/changelog.html">
+    <meta name="theme-color" content="#030712">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow ambient-glow-secondary"></div>
+    <div class="bg-grid"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Wametra 2 Logo">
+                <span>Wametra 2</span>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html#funkcje">Funkcje</a>
+                <a href="changelog.html">Aktualizacje</a>
+                <a href="index.html#kontakt">Kontakt</a>
+                <a href="index.html#kontakt" class="btn-primary">Zamów dostęp</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <header class="changelog-hero">
+        <div class="container">
+            <span class="eyebrow">Historia zmian</span>
+            <h1>Changelog <span class="gradient-text">Wametra 2</span></h1>
+            <p>Aplikacja jest rozwijana krok po kroku. Poniżej znajdziesz pełną historię aktualizacji wraz z opisem wprowadzonych usprawnień.</p>
+        </div>
+    </header>
+
+    <section class="changelog-timeline-section">
+        <div class="container">
+            <div class="timeline">
+
+                <!-- v2.3.3 -->
+                <div class="timeline-entry reveal">
+                    <div class="timeline-marker"><span class="timeline-dot"></span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-badge version-badge-latest">v2.3.3</span>
+                            <span class="timeline-date">15 września 2026</span>
+                            <span class="latest-pill">Najnowsza wersja</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Poprawiona ostrość i szybkość ustawiania ostrości aparatu na nowoczesnych smartfonach (m.in. Samsung S21/S23) — koniec z rozmytymi zdjęciami kodów.</li>
+                            <li>Szybsze i bardziej stabilne skanowanie kodów Data Matrix, bez przegrzewania telefonu przy długiej pracy w terenie.</li>
+                            <li>Stabilniejszy generator raportów PDF — wyeliminowano zawieszanie się aplikacji przy obszernych, wielostronicowych dokumentach.</li>
+                            <li>Formularze automatycznie dopasowują się do typu urządzenia (wodomierz / nakładka radiowa); nowy, czytelny protokół legalizacji z polami potwierdzenia wykonania usługi.</li>
+                            <li>Możliwość importu gotowych list z plików Excel (CSV) przygotowanych poza aplikacją — przyspiesza start weryfikacji.</li>
+                            <li>Czytelniejsze statystyki podczas weryfikacji — osobno widoczne pozycje zgodne i nadwyżki.</li>
+                            <li>Dodatkowe zabezpieczenia stabilności pracy aparatu podczas intensywnego, ciągłego skanowania.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.2.0 -->
+                <div class="timeline-entry reveal">
+                    <div class="timeline-marker"><span class="timeline-dot"></span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-badge">v2.2.0</span>
+                            <span class="timeline-date">12 września 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Automatyczne rozpoznawanie średnicy (DN) wodomierza na podstawie zeskanowanego kodu, dzięki importowanym słownikom producentów (np. Itron) — mniej ręcznego wpisywania danych.</li>
+                            <li>Formularz automatycznie dopasowuje się do rodzaju sprzętu (wodomierz / nakładka), pomijając zbędne pola i przyspieszając pracę.</li>
+                            <li>Dodatkowe zabezpieczenie danych: jeśli urządzenia nie ma w bazie, aplikacja poprosi o ręczne potwierdzenie średnicy zamiast zapisać niepełny rekord.</li>
+                            <li>Poprawiona stabilność trybu klawiatury Bluetooth (PC-Link) — wyeliminowano „zacinające się” znaki przy transmisji do komputera.</li>
+                            <li>Tryb PC-Link rozszerzony do 4 wariantów transmisji, dopasowanych do różnych sposobów pracy w arkuszu Excel.</li>
+                            <li>Raporty PDF i CSV wzbogacone o kolumnę ze średnicą oraz automatyczne podsumowanie ilości sprzętu w podziale na średnice.</li>
+                            <li>Spójny, ciemny motyw interfejsu skanera niezależnie od ustawień telefonu — lepsza czytelność w terenie, także po zmroku.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.1.0 -->
+                <div class="timeline-entry reveal">
+                    <div class="timeline-marker"><span class="timeline-dot"></span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-badge">v2.1.0</span>
+                            <span class="timeline-date">10 września 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Nowość: tryb Bluetooth HID — telefon działa jak profesjonalny skaner bezprzewodowy podłączony do komputera, bez dodatkowego oprogramowania.</li>
+                            <li>Szybkie wydawanie z magazynu: zeskanuj kod, wpisz ilość — dane trafiają od razu do właściwych komórek w Excelu.</li>
+                            <li>Poprawiona współpraca z Excelem — kody z wiodącymi zerami i ułamkami nie są już automatycznie obcinane.</li>
+                            <li>Aplikacja zapamiętuje ostatnio wybrany tryb pracy skanera pomiędzy uruchomieniami.</li>
+                            <li>Zabezpieczenie przed przypadkowym zdublowaniem skanu, z możliwością szybkiego cofnięcia ostatnio dodanej pozycji.</li>
+                            <li>Dodatkowe zabezpieczenia stabilności transmisji Bluetooth przy zamykaniu okna skanera.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.0.0 -->
+                <div class="timeline-entry reveal">
+                    <div class="timeline-marker"><span class="timeline-dot"></span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-badge">v2.0.0</span>
+                            <span class="timeline-date">9 września 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Kompletna przebudowa aplikacji na nowej, wydajniejszej architekturze technicznej.</li>
+                            <li>Znaczne przyspieszenie działania bazy danych — płynna praca nawet przy dziesiątkach tysięcy zapisanych pozycji.</li>
+                            <li>Wbudowany, bezpieczny mechanizm tworzenia i przywracania kopii zapasowych danych.</li>
+                            <li>Przebudowany silnik skanowania kodów — szybszy odczyt i mniejsze zużycie baterii.</li>
+                            <li>Odświeżony, w pełni zdalny system weryfikacji licencji.</li>
+                            <li>Nowy, płynny ekran startowy oraz płynne przejścia między widokami aplikacji.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v1.1.0 -->
+                <div class="timeline-entry reveal">
+                    <div class="timeline-marker"><span class="timeline-dot"></span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-badge">v1.1.0</span>
+                            <span class="timeline-date">30 sierpnia 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Nowy, dokładniejszy algorytm weryfikacji skanowanych kodów.</li>
+                            <li>Ulepszone sygnały dźwiękowe i wibracje — wygodniejsza praca z latarką w słabo oświetlonych pomieszczeniach.</li>
+                            <li>Nowoczesny interfejs użytkownika (Material Design 3) z pełnym trybem ciemnym.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v1.0.0 -->
+                <div class="timeline-entry reveal">
+                    <div class="timeline-marker"><span class="timeline-dot"></span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-badge">v1.0.0</span>
+                            <span class="timeline-date">19 sierpnia 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Pierwsza wersja aplikacji.</li>
+                            <li>Podstawowy moduł weryfikacji oraz eksportu danych do plików CSV i PDF.</li>
+                            <li>Pierwsze testy zabezpieczeń licencyjnych.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+	<section id="kontakt" class="cta-section">
+		<div class="container">
+			<div class="cta-box reveal">
+				<div class="glow-orb"></div>
+				<h2>Zainteresowany dostępem?</h2>
+				<p>Skontaktuj się z nami, aby uzyskać licencję i instrukcję wdrożenia najnowszej wersji Wametra 2.</p>
+				<a href="index.html#kontakt" class="btn-glow">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+					Przejdź do formularza kontaktowego
+				</a>
+				<span class="small-text">Odpowiadamy w ciągu 24 godzin.</span>
+			</div>
+		</div>
+	</section>
+
+    <footer>
+        <div class="container footer-content">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Wametra 2 Logo">
+                <span>Wametra 2</span>
+            </a>
+            <div class="footer-links">
+                <a href="index.html#funkcje">Funkcje</a>
+                <a href="changelog.html">Aktualizacje</a>
+                <a href="index.html#kontakt">Kontakt</a>
+            </div>
+            <p class="copyright">Stworzone przez: Daniel Kaszczyszyn<br>© 2026 Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
