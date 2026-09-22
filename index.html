@@ -3,97 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wametra 2 - Zarządzanie wodomierzami i nakładkami</title>
+    <title>Wametra 2 | Profesjonalna inwentaryzacja wodomierzy</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Dodanie czcionki Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Gradient w tle -->
+    <div class="ambient-glow"></div>
 
     <!-- Nawigacja -->
     <nav class="navbar">
         <div class="logo">
-            <!-- Tutaj wstaw swoje logo V z kroplą -->
             <img src="logo.jpg" alt="Wametra 2 Logo">
             <span>Wametra 2</span>
         </div>
-        <a href="#download" class="btn-primary">Pobierz aplikację</a>
+        <a href="#kontakt" class="btn-primary">Zamów dostęp</a>
     </nav>
 
     <!-- Sekcja Hero -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Pełna ewidencja wodomierzy w jednym miejscu.</h1>
-            <p>Przyspiesz inwentaryzację, utrzymaj idealny porządek na magazynie i generuj gotowe raporty w kilka sekund. Wametra 2 to niezbędne narzędzie dla Twojej firmy.</p>
+            <div class="badge">Wersja 2.0 już dostępna</div>
+            <h1>Nowy wymiar zarządzania <span>magazynem</span>.</h1>
+            <p>Skanuj wodomierze i nakładki, twórz dokumenty PZ/WZ, przeprowadzaj inwentaryzację i korzystaj z telefonu jak ze skanera Bluetooth dzięki trybowi PC-Link.</p>
             <div class="hero-buttons">
-                <a href="#download" class="btn-primary">Pobierz z Google Play</a>
-                <a href="#features" class="btn-secondary">Poznaj funkcje</a>
+                <a href="#kontakt" class="btn-primary">Skontaktuj się i pobierz</a>
+                <a href="#funkcje" class="btn-secondary">Zobacz interfejs</a>
             </div>
         </div>
-        <div class="hero-image">
-            <!-- Tutaj wstaw plakat promocyjny z wodomierzem -->
-            <img src="plakat.jpg" alt="Aplikacja Wametra 2 - Skanowanie wodomierzy">
+        <div class="hero-image-wrapper">
+            <img src="plakat.jpg" alt="Wametra 2" class="main-poster">
         </div>
     </header>
 
-    <!-- Sekcja Zalety -->
-    <section id="features" class="features">
-        <h2>Dlaczego warto wybrać Wametrę 2?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="icon">⚡</div>
-                <h3>Błyskawiczne skanowanie</h3>
-                <p>Użyj aparatu w telefonie, aby szybko skanować kody wodomierzy i nakładek. Koniec z ręcznym przepisywaniem numerów seryjnych.</p>
+    <!-- Sekcja Bento Grid (Unikalny układ funkcji na podstawie screenów) -->
+    <section id="funkcje" class="bento-section">
+        <div class="section-header">
+            <h2>Zaprojektowana dla profesjonalistów</h2>
+            <p>Każdy element interfejsu został stworzony z myślą o szybkości pracy na magazynie i w terenie.</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- Box 1: PC-Link -->
+            <div class="bento-card span-2 highlight-card">
+                <div class="card-content">
+                    <h3>Tryb PC-Link (Skaner Bluetooth)</h3>
+                    <p>Nie potrzebujesz drogich skanerów magazynowych. Połącz aplikację ze swoim komputerem i wprowadzaj zeskanowane kody bezpośrednio do programu Excel lub systemu ERP.</p>
+                </div>
+                <div class="card-image mockup-phone half-mockup">
+                    <img src="screen-home.jpg" alt="Pulpit Wametra 2">
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="icon">📦</div>
-                <h3>Porządek na magazynie</h3>
-                <p>Miej pełną kontrolę nad stanem magazynowym. Dokładnie wiesz, jakie urządzenia posiadasz i gdzie się znajdują.</p>
+
+            <!-- Box 2: Typy dokumentów -->
+            <div class="bento-card">
+                <div class="card-content">
+                    <h3>Pełna kategoryzacja</h3>
+                    <p>Błyskawicznie wybieraj typ operacji: Przyjęcie, Wydanie lub Inwentaryzacja z podziałem na wodomierze i nakładki.</p>
+                </div>
+                <div class="card-image mockup-phone partial">
+                    <img src="screen-nowy.jpg" alt="Nowy dokument">
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="icon">📊</div>
-                <h3>Raporty i Listy</h3>
-                <p>Aplikacja automatycznie generuje przejrzyste listy i raporty, które możesz wyeksportować i przekazać dalej.</p>
+
+            <!-- Box 3: Skaner -->
+            <div class="bento-card">
+                <div class="card-content">
+                    <h3>Szybki Skaner (Parser)</h3>
+                    <p>Zaawansowany system odczytu pozwalający na skanowanie kodów i ich parsowanie w czasie rzeczywistym.</p>
+                </div>
+                <div class="card-image mockup-phone partial">
+                    <img src="screen-skaner.jpg" alt="Skaner">
+                </div>
+            </div>
+
+            <!-- Box 4: Zarządzanie -->
+            <div class="bento-card span-2 display-flex">
+                <div class="card-content flex-1">
+                    <h3>Zarządzanie ewidencją</h3>
+                    <p>Wyszukuj, filtruj i zamykaj otwarte dokumenty. Pełna kontrola nad historią operacji magazynowych na jednym ekranie.</p>
+                </div>
+                <div class="card-image mockup-phone full-mockup flex-1">
+                    <img src="screen-listy.jpg" alt="Listy dokumentów">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Sekcja Zrzutów Ekranu (Galeria) -->
-    <section class="showcase">
-        <h2>Zobacz aplikację w akcji</h2>
-        <p class="section-subtitle">Intuicyjny interfejs zaprojektowany z myślą o szybkiej pracy terenowej i magazynowej.</p>
-        
-        <div class="showcase-grid">
-            <!-- Zrzut 1: Skaner -->
-            <div class="app-screen">
-                <img src="screen-skaner.jpg" alt="Skaner w aplikacji Wametra 2">
-                <h3>Inteligentny Skaner</h3>
-                <p>Skanuje numery seryjne bez pomyłek, nawet w trudnych warunkach oświetleniowych.</p>
-            </div>
-            <!-- Zrzut 2: Listy -->
-            <div class="app-screen">
-                <img src="screen-listy.jpg" alt="Listy urządzeń">
-                <h3>Przejrzyste Ewidencje</h3>
-                <p>Grupuj, filtruj i przeszukuj setki wodomierzy i nakładek w ułamku sekundy.</p>
-            </div>
-            <!-- Zrzut 3: Ustawienia/Raporty -->
-            <div class="app-screen">
-                <img src="screen-ustawienia.jpg" alt="Generowanie raportów">
-                <h3>Eksport Danych</h3>
-                <p>Generuj podsumowania i wysyłaj gotowe raporty magazynowe prosto z telefonu.</p>
-            </div>
+    <!-- Sekcja CTA (Kontakt) -->
+    <section id="kontakt" class="cta-section">
+        <div class="cta-box glass-panel">
+            <h2>Zacznij korzystać z Wametra 2</h2>
+            <p>Aplikacja jest dystrybuowana w modelu B2B. Skontaktuj się ze mną bezpośrednio na adres e-mail, aby uzyskać dostęp, licencję oraz instrukcję wdrożenia.</p>
+            <!-- Wstaw swój prawdziwy adres email poniżej -->
+            <a href="mailto:twojadres@email.pl?subject=ZAPYTANIE:%20Dostęp%20do%20Wametra%202" class="btn-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Wyślij e-mail z zapytaniem
+            </a>
+            <p class="small-text">Szybka odpowiedź w ciągu 24 godzin.</p>
         </div>
     </section>
 
     <!-- Stopka -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
+            <div class="logo">
                 <img src="logo.jpg" alt="Wametra 2 Logo">
                 <span>Wametra 2</span>
             </div>
-            <p>Aplikacja stworzona do zarządzania wodomierzami i urządzeniami pomiarowymi.</p>
-            <p class="copyright">Daniel Kaszczyszyn © 2026 Wszelkie prawa zastrzeżone.</p>
+            <p class="copyright">Stworzone przez: Daniel Kaszczyszyn<br>© 2026 Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
 
