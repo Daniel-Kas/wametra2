@@ -3,120 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wametra 2 | Profesjonalna inwentaryzacja wodomierzy</title>
+
+    <!-- === SEO PODSTAWOWE === -->
+    <title>Wametra 2 – Aplikacja do inwentaryzacji i skanowania wodomierzy oraz nakładek radiowych (Android)</title>
+    <meta name="description" content="Wametra 2 to aplikacja na Androida do skanowania wodomierzy, nakładek radiowych, tworzenia dokumentów PZ/WZ i inwentaryzacji magazynowej. Tryb PC-Link zamienia telefon w skaner Bluetooth.">
+    <meta name="keywords" content="wametra, inwentaryzacja wodomierzy, nakładki radiowe, skaner kodów kreskowych, aplikacja magazynowa android, PZ WZ, PC-Link, skaner bluetooth">
+    <meta name="author" content="Daniel Kaszczyszyn">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://daniel-kas.github.io/wametra2/">
+    <meta name="theme-color" content="#030712">
+
+    <!-- === Open Graph (Facebook/LinkedIn) === -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wametra 2 – Zarządzanie wodomierzami i urządzeniami pomiarowymi">
+    <meta property="og:description" content="Skanuj wodomierze, nakładki radiowe, twórz dokumenty PZ/WZ i przeprowadzaj inwentaryzację. Zamień telefon w skaner Bluetooth dzięki trybowi PC-Link.">
+    <meta property="og:image" content="https://daniel-kas.github.io/wametra2/img/og-image.jpg">
+    <meta property="og:url" content="https://daniel-kas.github.io/wametra2/">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Wametra 2">
+
+    <!-- === Twitter Card === -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wametra 2 – Zarządzanie wodomierzami i urządzeniami pomiarowymi">
+    <meta name="twitter:description" content="Aplikacja na Androida do skanowania, inwentaryzacji i zarządzania dokumentami magazynowymi.">
+    <meta name="twitter:image" content="https://daniel-kas.github.io/wametra2/img/og-image.jpg">
+
+    <!-- === Favicony === -->
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- === Dane strukturalne (SEO) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Wametra 2",
+      "operatingSystem": "Android",
+      "applicationCategory": "BusinessApplication",
+      "description": "Aplikacja do inwentaryzacji wodomierzy, nakładek radiowych, skanowania kodów kreskowych i zarządzania dokumentami magazynowymi PZ/WZ z trybem PC-Link.",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Kaszczyszyn"
+      },
+      "offers": {
+        "@type": "Offer",
+        "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
 </head>
 <body>
 
-    <!-- Gradient w tle -->
     <div class="ambient-glow"></div>
+    <div class="ambient-glow ambient-glow-secondary"></div>
+    <div class="bg-grid"></div>
 
-    <!-- Nawigacja -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="img/logo.png" alt="Wametra 2 Logo">
-            <span>Wametra 2</span>
-        </div>
-        <a href="#kontakt" class="btn-primary">Zamów dostęp</a>
-    </nav>
+	<nav class="navbar">
+		<div class="container nav-container">
+			<a href="index.html" class="logo">
+				<img src="img/logo.png" alt="Wametra 2 Logo">
+				<span>Wametra 2</span>
+			</a>
 
-    <!-- Sekcja Hero -->
+			<button class="hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="navMenu">
+				<span></span><span></span><span></span>
+			</button>
+
+			<div class="nav-menu" id="navMenu">
+				<a href="#funkcje">Funkcje</a>
+				<a href="changelog.html">Aktualizacje</a>
+				<a href="#kontakt">Kontakt</a>
+				<a href="#kontakt" class="btn-primary">Zamów dostęp</a>
+			</div>
+		</div>
+	</nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
     <header class="hero">
-        <div class="hero-content">
-            <div class="badge">Wersja 2.0 już dostępna</div>
-            <h1>Nowy wymiar zarządzania <span>magazynem</span>.</h1>
-            <p>Skanuj wodomierze i nakładki, twórz dokumenty PZ/WZ, przeprowadzaj inwentaryzację i korzystaj z telefonu jak ze skanera Bluetooth dzięki trybowi PC-Link.</p>
-            <div class="hero-buttons">
-                <a href="#kontakt" class="btn-primary">Skontaktuj się i pobierz</a>
-                <a href="#funkcje" class="btn-secondary">Zobacz interfejs</a>
+        <div class="container hero-inner">
+			<div class="hero-content reveal">
+				<div class="badge">
+					<span class="pulse-dot"></span>
+					Wersja 2.0 już dostępna
+				</div>
+				<h1>Nowy wymiar zarządzania <span class="gradient-text">wodomierzami i urządzeniami pomiarowymi</span></h1>
+				<p>Skanuj wodomierze i nakładki radiowe, twórz dokumenty PZ/WZ oraz przeprowadzaj inwentaryzację — wszystko z poziomu jednego urządzenia, bez komputera. Gdy potrzebujesz wprowadzać dane wprost do Excela, włącz tryb PC-Link i zamień telefon w profesjonalny skaner Bluetooth.</p>
+				<div class="hero-buttons">
+					<a href="#kontakt" class="btn-primary">Skontaktuj się</a>
+					<a href="#funkcje" class="btn-secondary">Zobacz interfejs</a>
+				</div>
+			</div>
+
+            <div class="hero-visuals reveal">
+                <div class="glow-behind"></div>
+                <div class="phone-stack phone-back">
+                    <img src="img/2_Wametra.jpg" alt="Wametra Skaner">
+                </div>
+                <div class="phone-stack phone-front">
+                    <img src="img/splash_bg2.png" alt="Wametra 2 Splash">
+                </div>
+                <div class="floating-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>PC-Link Aktywny</span>
+                </div>
             </div>
-        </div>
-        <div class="hero-image-wrapper">
-            <img src="img/splash_bg2.png" alt="Wametra 2" class="main-poster">
         </div>
     </header>
 
-    <!-- Sekcja Bento Grid (Unikalny układ funkcji na podstawie screenów) -->
+    <section class="highlights-bar">
+        <div class="container highlights-inner">
+            <div class="highlight-item reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span>Bluetooth PC-Link</span>
+            </div>
+            <div class="highlight-item reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>Skanowanie w czasie rzeczywistym</span>
+            </div>
+            <div class="highlight-item reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 17l4-4 4 4"></path><path d="M12 12v9"></path><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"></path></svg>
+                <span>Eksport do Excel / PDF</span>
+            </div>
+            <div class="highlight-item reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Pełna kontrola dokumentów</span>
+            </div>
+        </div>
+    </section>
+
     <section id="funkcje" class="bento-section">
-        <div class="section-header">
-            <h2>Zaprojektowana dla profesjonalistów</h2>
-            <p>Każdy element interfejsu został stworzony z myślą o szybkości pracy na magazynie i w terenie.</p>
-        </div>
-
-        <div class="bento-grid">
-            <!-- Box 1: PC-Link -->
-            <div class="bento-card span-2 highlight-card">
-                <div class="card-content">
-                    <h3>Tryb PC-Link (Skaner Bluetooth)</h3>
-                    <p>Nie potrzebujesz drogich skanerów magazynowych. Połącz aplikację ze swoim komputerem i wprowadzaj zeskanowane kody bezpośrednio do programu Excel lub systemu ERP.</p>
-                </div>
-                <div class="card-image mockup-phone half-mockup">
-                    <img src="img/1_Wametra.jpg" alt="Pulpit Wametra 2">
-                </div>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Funkcje aplikacji</span>
+                <h2>Zaprojektowana dla profesjonalistów</h2>
+                <p>Każdy element interfejsu został stworzony z myślą o szybkości pracy na magazynie.</p>
             </div>
 
-            <!-- Box 2: Typy dokumentów -->
-            <div class="bento-card">
-                <div class="card-content">
-                    <h3>Pełna kategoryzacja</h3>
-                    <p>Błyskawicznie wybieraj typ operacji: Przyjęcie, Wydanie lub Inwentaryzacja z podziałem na wodomierze i nakładki.</p>
-                </div>
-                <div class="card-image mockup-phone partial">
-                    <img src="img/5_Wametra.jpg" alt="Nowy dokument">
-                </div>
-            </div>
+            <div class="bento-grid">
 
-            <!-- Box 3: Skaner -->
-            <div class="bento-card">
-                <div class="card-content">
-                    <h3>Szybki Skaner (Parser)</h3>
-                    <p>Zaawansowany system odczytu pozwalający na skanowanie kodów i ich parsowanie w czasie rzeczywistym.</p>
+                <!-- Karta 1: PC-Link (WIDE) -->
+                <div class="bento-card wide-card reveal">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                        </div>
+                        <h3>PC-Link — telefon jako skaner</h3>
+                        <p>Połącz smartfon z komputerem przez Bluetooth i wprowadzaj zeskanowane kody wprost do Excela — bez dodatkowego oprogramowania.</p>
+                    </div>
+                    <div class="card-visual wide-visual">
+                        <div class="phone-frame">
+                            <img src="img/1_Wametra.jpg" alt="Tryb PC-Link">
+                        </div>
+                        <div class="phone-frame offset-frame">
+                            <img src="img/2_Wametra.jpg" alt="Skaner Bluetooth">
+                        </div>
+                    </div>
                 </div>
-                <div class="card-image mockup-phone partial">
-                    <img src="img/2_Wametra.jpg" alt="Skaner">
-                </div>
-            </div>
 
-            <!-- Box 4: Zarządzanie -->
-            <div class="bento-card span-2 display-flex">
-                <div class="card-content flex-1">
-                    <h3>Zarządzanie ewidencją</h3>
-                    <p>Wyszukuj, filtruj i zamykaj otwarte dokumenty. Pełna kontrola nad historią operacji magazynowych na jednym ekranie.</p>
+                <!-- Karta 2: Typy dokumentów -->
+                <div class="bento-card standard-card reveal">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                        </div>
+                        <h3>Elastyczne dokumenty</h3>
+                        <p>Twórz Przyjęcia (PZ), Wydania (WZ) lub Inwentaryzacje jednym dotknięciem.</p>
+                    </div>
+                    <div class="card-visual">
+                        <div class="phone-frame">
+                            <img src="img/5_Wametra.jpg" alt="Nowy dokument">
+                        </div>
+                    </div>
                 </div>
-                <div class="card-image mockup-phone full-mockup flex-1">
-                    <img src="img/3_Wametra.jpg" alt="Listy dokumentów">
+
+                <!-- Karta 3: Szybki Parser -->
+                <div class="bento-card standard-card reveal">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <h3>Błyskawiczny parser</h3>
+                        <p>Odczyt i analiza kodów w czasie rzeczywistym — zero opóźnień nawet przy dużym wolumenie.</p>
+                    </div>
+                    <div class="card-visual">
+                        <div class="phone-frame">
+                            <img src="img/10_Wametra.jpg" alt="Parser kodów">
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Karta 4: Tryb weryfikacji -->
+                <div class="bento-card standard-card reveal">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <h3>Tryb weryfikacji</h3>
+                        <p>Sprawdzaj zgodność urządzeń przysłanych z legalizacji i napraw</p>
+                    </div>
+                    <div class="card-visual">
+                        <div class="phone-frame">
+                            <img src="img/9_Wametra.jpg" alt="Tryb weryfikacji">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Karta 5: Ustawienia -->
+                <div class="bento-card standard-card reveal">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                        </div>
+                        <h3>Ustawienia i słowniki</h3>
+                        <p>Konfiguruj typy urządzeń, kody i parametry — dopasuj aplikację do własnych procesów.</p>
+                    </div>
+                    <div class="card-visual">
+                        <div class="phone-frame">
+                            <img src="img/6_Wametra.jpg" alt="Ustawienia">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Karta 6: Eksporty i raporty (WIDE) -->
+                <div class="bento-card wide-card reveal">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 17l4-4 4 4"></path><path d="M12 12v9"></path><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"></path></svg>
+                        </div>
+                        <h3>Eksporty i raporty</h3>
+                        <p>Generuj listy inwentaryzacyjne, eksportuj dane do Excela i twórz gotowe raporty w PDF.</p>
+                    </div>
+                    <div class="card-visual wide-visual">
+                        <div class="phone-frame">
+                            <img src="img/7_Wametra.jpg" alt="Eksport danych">
+                        </div>
+                        <div class="phone-frame offset-frame">
+                            <img src="img/8_Wametra.jpg" alt="Raporty">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+		<section class="changelog-teaser">
+			<div class="container">
+				<div class="changelog-box reveal">
+					<div class="changelog-info">
+						<span class="eyebrow">Rozwój aplikacji</span>
+						<h2>Stale rozwijana i ulepszana</h2>
+						<p>Wametra 2 jest aktywnie rozwijana — regularnie wdrażamy nowe funkcje, poprawki wydajności i usprawnienia zgłaszane przez naszych klientów.</p>
+						<a href="changelog.html" class="btn-secondary">Zobacz pełną historię zmian</a>
+					</div>
+					<div class="changelog-latest">
+						<div class="version-tag">
+							<span class="version-number">v2.3.3</span>
+							<span class="version-date">15 września 2026</span>
+						</div>
+						<ul class="changelog-list">
+							<li>Poprawiona ostrość aparatu na nowoczesnych smartfonach</li>
+							<li>Szybsze i stabilniejsze skanowanie kodów Data Matrix</li>
+							<li>Import gotowych list z plików Excel (CSV) do weryfikacji</li>
+							<li>Czytelniejszy protokół legalizacji i raporty PDF</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+<section id="kontakt" class="cta-section">
+    <div class="container">
+        <div class="cta-box reveal">
+            <div class="glow-orb"></div>
 
-    <!-- Sekcja CTA (Kontakt) -->
-    <section id="kontakt" class="cta-section">
-        <div class="cta-box glass-panel">
-            <h2>Zacznij korzystać z Wametra 2</h2>
-            <p>Aplikacja jest dystrybuowana w modelu B2B. Skontaktuj się ze mną bezpośrednio na adres e-mail, aby uzyskać dostęp, licencję oraz instrukcję wdrożenia.</p>
-            <!-- Wstaw swój prawdziwy adres email poniżej -->
-            <a href="mailto:twojadres@email.pl?subject=ZAPYTANIE:%20Dostęp%20do%20Wametra%202" class="btn-glow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                Wyślij e-mail z zapytaniem
-            </a>
-            <p class="small-text">Szybka odpowiedź w ciągu 24 godzin.</p>
-        </div>
-    </section>
-
-    <!-- Stopka -->
-    <footer>
-        <div class="footer-content">
-            <div class="logo">
-                <img src="img/logo.png" alt="Wametra 2 Logo">
-                <span>Wametra 2</span>
+            <div class="cta-header">
+                <h2>Zacznij korzystać z Wametra 2</h2>
+                <p>Aplikacja jest dystrybuowana w modelu B2B. Wypełnij formularz, aby uzyskać dostęp, licencję oraz instrukcję wdrożenia.</p>
+                <ul class="cta-checklist">
+                    <li>Wsparcie wdrożeniowe</li>
+                    <li>Licencja B2B</li>
+                    <li>Regularne aktualizacje</li>
+                </ul>
             </div>
-            <p class="copyright">Stworzone przez: Daniel Kaszczyszyn<br>© 2026 Wszelkie prawa zastrzeżone.</p>
-        </div>
-    </footer>
 
+            <form id="contactForm" class="contact-form" novalidate>
+                <!-- Pole antyspamowe - musi zostać ukryte i puste -->
+                <input type="text" name="honeypot" class="honeypot-field" tabindex="-1" autocomplete="off">
+
+                <!-- Klucz dostępu StaticForms -->
+                <input type="hidden" name="apiKey" value="sf_cd883fce8b42f3b2d836af3f">
+                <input type="hidden" name="subject" value="Nowe zapytanie: Dostęp do Wametra 2">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Firma *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Adres e-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon (opcjonalnie)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <div class="form-group form-group-full">
+                    <label for="message">Wiadomość *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Opisz swoje potrzeby, liczbę urządzeń lub pytania dotyczące wdrożenia..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-glow form-submit-btn" id="submitBtn">
+                    <span class="btn-text">Wyślij zapytanie</span>
+                    <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+
+                <span class="small-text">Odpowiemy jak najszybciej.</span>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                <div class="success-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Dziękujemy za zgłoszenie!</h3>
+                <p>Twoja wiadomość została wysłana. Odezwiemy się na podany adres e-mail.</p>
+            </div>
+
+            <div class="form-error" id="formError">
+                <p>Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<footer>
+		<div class="container footer-content">
+			<a href="index.html" class="logo">
+				<img src="img/logo.png" alt="Wametra 2 Logo">
+				<span>Wametra 2</span>
+			</a>
+			<div class="footer-links">
+				<a href="#funkcje">Funkcje</a>
+				<a href="changelog.html">Aktualizacje</a>
+				<a href="#kontakt">Kontakt</a>
+			</div>
+			<p class="copyright">Stworzone przez: Daniel Kaszczyszyn<br>© 2026 Wszelkie prawa zastrzeżone.</p>
+		</div>
+	</footer>
+
+    <!-- Lightbox do powiększania zrzutów ekranu -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij podgląd">&times;</button>
+        <img src="" alt="Podgląd ekranu aplikacji" id="lightboxImg">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
