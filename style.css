@@ -1219,6 +1219,9 @@ footer {
         padding-top: 14px;
         padding-bottom: 14px;
     }
+    .bg-grid {
+        display: none;
+    }
 
     .logo {
         font-size: 1.1rem;
@@ -1344,6 +1347,18 @@ footer {
     }
     .latest-pill {
         margin-left: 0;
+    }
+    .navbar,
+    .nav-menu,
+    .nav-overlay,
+    .bento-card,
+    .cta-box,
+    .changelog-box,
+    .changelog-latest,
+    .timeline-content,
+    .floating-badge {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
 }
 
