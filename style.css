@@ -28,6 +28,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -1177,7 +1179,8 @@ footer {
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
+        transform: translateX(100%);
         width: min(320px, 80vw);
         height: 100vh;
         background: rgba(3, 7, 18, 0.98);
@@ -1187,13 +1190,13 @@ footer {
         justify-content: flex-start;
         padding: 100px 32px 40px;
         gap: 28px;
-        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         border-left: 1px solid var(--border-glass);
         z-index: 200;
     }
 
     .nav-menu.active {
-        right: 0;
+        transform: translateX(0);
     }
 
     .nav-menu a:not(.btn-primary) {
